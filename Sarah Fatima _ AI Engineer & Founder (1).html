@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sarah Fatima | AI Engineer &amp; Founder</title>
+<meta name="description" content="Sarah Fatima is an AI Engineer and AI Entrepreneur in Multan, Pakistan. She builds production AI systems and the businesses around them.">
+<meta property="og:title" content="Sarah Fatima | AI Engineer &amp; Founder">
+<meta property="og:description" content="Builds the technology, and builds the business around it.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Sarah Fatima | AI Engineer &amp; Founder">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Sarah Fatima","jobTitle":"AI Engineer and AI Entrepreneur","address":{"@type":"PostalAddress","addressLocality":"Multan","addressCountry":"PK"}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* ===== DESIGN TOKENS ===== */
+:root{
+  --bg:#F2F5F8;--surface:#FFFFFF;--ink:#101C28;--muted:#4A5968;--line:#D5DDE6;
+  --accent:#1B4DB1;--accent-ink:#FFFFFF;--term:#0E1A27;--term-ink:#CFE0F5;
+  --s1:.5rem;--s2:1rem;--s3:1.5rem;--s4:2.5rem;--s5:4.5rem;
+  --r:10px;--shadow:0 1px 2px rgba(16,28,40,.08);
+  --display:"Fraunces",Georgia,serif;--sans:"Instrument Sans",system-ui,sans-serif;--mono:"JetBrains Mono",ui-monospace,monospace;
+  color-scheme:light;box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0B131C;--surface:#121E2A;--ink:#EAF0F6;--muted:#9FB0C1;--line:#24344600;--line:#243446;
+  --accent:#7FA8F5;--accent-ink:#0B131C;--term:#070D14;--term-ink:#CFE0F5;color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0B131C;--surface:#121E2A;--ink:#EAF0F6;--muted:#9FB0C1;--line:#243446;
+  --accent:#7FA8F5;--accent-ink:#0B131C;--term:#070D14;--term-ink:#CFE0F5;color-scheme:dark}
+html{scroll-behavior:smooth;scroll-padding-top:calc(72px + env(safe-area-inset-top,0px))}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1rem/1.65 var(--sans);overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:60}
+img,svg{max-width:100%}
+a{color:var(--accent)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+h1,h2,h3{font-family:var(--display);line-height:1.15;margin:0 0 var(--s2)}
+h1{font-size:clamp(2.6rem,7vw,4.6rem);font-weight:700;letter-spacing:-.02em}
+h2{font-size:clamp(1.8rem,4vw,2.5rem)}
+h3{font-size:1.2rem}
+p{margin:0 0 var(--s2);max-width:62ch}
+.wrap{max-width:1120px;margin:0 auto;padding:0 var(--s3)}
+section{padding:var(--s5) 0;border-top:1px solid var(--line)}
+.lead{color:var(--muted);font-size:1.1rem}
+.mono{font-family:var(--mono);font-size:.85rem}
+/* ===== NAV ===== */
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--bg);border-bottom:1px solid var(--line)}
+nav{display:flex;align-items:center;gap:var(--s2);min-height:64px}
+.logo{font:700 1.25rem var(--display);text-decoration:none;color:var(--ink);margin-right:auto}
+.links{display:flex;gap:var(--s2);align-items:center}
+.links a{color:var(--muted);text-decoration:none;font-size:.92rem;padding:.3rem .2rem}
+.links a:hover{color:var(--ink)}
+.btn{display:inline-block;font:600 .95rem var(--sans);padding:.7rem 1.2rem;border-radius:var(--r);border:1.5px solid var(--accent);background:var(--accent);color:var(--accent-ink)!important;text-decoration:none;cursor:pointer}
+.btn.ghost{background:transparent;color:var(--accent)!important}
+.icon-btn{background:none;border:1px solid var(--line);color:var(--ink);border-radius:var(--r);width:42px;height:42px;cursor:pointer;font-size:1.1rem}
+#menu{display:none}
+@media (max-width:860px){
+  #menu{display:block}
+  .links{display:none;position:absolute;top:64px;left:0;right:0;flex-direction:column;align-items:stretch;background:var(--bg);padding:var(--s2) var(--s3);border-bottom:1px solid var(--line)}
+  .links.open{display:flex}
+  .links a{padding:.7rem 0}
+  nav>.btn{display:none}
+}
+/* ===== HERO ===== */
+.hero{display:grid;grid-template-columns:1.1fr 1fr;gap:var(--s4);align-items:center;border-top:0;padding-top:var(--s4)}
+@media (max-width:860px){.hero{grid-template-columns:1fr}}
+.cta-row{display:flex;flex-wrap:wrap;gap:var(--s2);margin-top:var(--s3)}
+.term{background:var(--term);color:var(--term-ink);border-radius:var(--r);padding:var(--s3);min-height:300px;font:400 .85rem/1.7 var(--mono);box-shadow:var(--shadow);overflow-x:auto}
+.term .bar{display:flex;gap:6px;margin-bottom:var(--s2)}
+.term .bar i{width:10px;height:10px;border-radius:50%;background:#3C5169}
+.term pre{margin:0;white-space:pre-wrap;word-break:break-word}
+.caret{display:inline-block;width:8px;height:1em;background:var(--term-ink);vertical-align:-2px;animation:blink 1s steps(2) infinite}
+@keyframes blink{50%{opacity:0}}
+/* ===== GRIDS & CARDS ===== */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,290px),1fr));gap:var(--s3)}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:var(--s3);box-shadow:var(--shadow);transition:border-color .2s}
+.card:hover{border-color:var(--accent)}
+.chip{display:inline-block;font:500 .78rem var(--mono);border:1px solid var(--line);border-radius:99px;padding:.15rem .65rem;margin:0 .3rem .4rem 0;color:var(--muted)}
+.status{color:var(--accent);border-color:var(--accent)}
+.facts{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--s2)}
+.fact b{display:block;font:700 1.9rem var(--display)}
+.two{display:grid;grid-template-columns:1.2fr 1fr;gap:var(--s4)}
+@media (max-width:860px){.two{grid-template-columns:1fr}}
+.photo{aspect-ratio:4/5;border:1.5px dashed var(--line);border-radius:var(--r);display:grid;place-items:center;color:var(--muted);text-align:center;padding:var(--s2)}
+.tabs{display:flex;gap:var(--s1);margin-bottom:var(--s3);flex-wrap:wrap}
+.tabs button{font:500 .95rem var(--sans);padding:.55rem 1rem;border-radius:99px;border:1px solid var(--line);background:transparent;color:var(--ink);cursor:pointer}
+.tabs button[aria-pressed="true"],.tabs button[aria-selected="true"]{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+ul.plain{list-style:none;padding:0;margin:0}
+ul.plain li{padding:.45rem 0;border-bottom:1px solid var(--line)}
+.timeline{border-left:2px solid var(--line);margin-left:.4rem;padding-left:var(--s3)}
+.timeline article{position:relative;padding-bottom:var(--s3)}
+.timeline article::before{content:"";position:absolute;left:calc(-1 * var(--s3) - 7px);top:.55rem;width:12px;height:12px;border-radius:50%;background:var(--accent)}
+blockquote{margin:0}
+form{display:grid;gap:var(--s2)}
+label{font-weight:600;font-size:.9rem;display:grid;gap:.3rem}
+input,select,textarea{font:inherit;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:.7rem .8rem;width:100%}
+.err{color:#B3261E;font-size:.82rem;font-weight:500;min-height:1em}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .err{color:#FF9B93}}
+:root[data-theme="dark"] .err{color:#FF9B93}
+footer{border-top:1px solid var(--line);padding:var(--s4) 0;color:var(--muted)}
+footer .wrap{display:flex;flex-wrap:wrap;gap:var(--s2);justify-content:space-between;align-items:center}
+.reveal{opacity:0;transform:translateY(12px);transition:opacity .5s,transform .5s}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}.caret{animation:none}}
+</style>
+</head>
+<body>
+
+<!-- ===== DATA (edit content here, not in the markup) ===== -->
+<script>
+const DATA = {
+  ventures: [
+    {name:"[EDIT] Venture One", desc:"[EDIT] One line on what this company or product does.", role:"Founder", status:"Building", metric:"[EDIT] metric", link:"#contact"},
+    {name:"[EDIT] Venture Two", desc:"[EDIT] One line on what this company or product does.", role:"Co-founder", status:"Live", metric:"[EDIT] metric", link:"#contact"}
+  ],
+  projects: [
+    {title:"[EDIT] Support agent", cat:"Agents", problem:"[EDIT] The problem it solved.", approach:"[EDIT] How you approached it.", stack:["Python","LLM","Tool use"], outcome:"[EDIT] outcome metric", gh:"#", demo:"#", study:"#"},
+    {title:"[EDIT] Document search", cat:"RAG", problem:"[EDIT] The problem it solved.", approach:"[EDIT] How you approached it.", stack:["Python","Vector DB","Evals"], outcome:"[EDIT] outcome metric", gh:"#", demo:"#", study:"#"},
+    {title:"[EDIT] Demand forecasting", cat:"ML", problem:"[EDIT] The problem it solved.", approach:"[EDIT] How you approached it.", stack:["PyTorch","Airflow","SQL"], outcome:"[EDIT] outcome metric", gh:"#", demo:"#", study:"#"},
+    {title:"[EDIT] AI product", cat:"Products", problem:"[EDIT] The problem it solved.", approach:"[EDIT] How you approached it.", stack:["TypeScript","LLM","AWS"], outcome:"[EDIT] outcome metric", gh:"#", demo:"#", study:"#"}
+  ],
+  stack: {
+    "Languages":["Python","TypeScript","SQL"],
+    "LLM and AI":["LLM APIs","RAG","Fine-tuning","Evals"],
+    "Frameworks":["PyTorch","FastAPI","React"],
+    "Cloud and MLOps":["AWS","Docker","CI/CD","Monitoring"],
+    "Data":["PostgreSQL","Vector databases","Airflow"]
+  },
+  timeline: [
+    {when:"[EDIT] Year – Present", role:"Founder, [EDIT] company", note:"[EDIT] What you build and lead."},
+    {when:"[EDIT] Year – Year", role:"AI Engineer, [EDIT] company", note:"[EDIT] Systems you shipped."},
+    {when:"[EDIT] Year", role:"[EDIT] Milestone or education", note:"[EDIT] Short description."}
+  ],
+  writing: [
+    {type:"Talk", title:"[EDIT] Talk title", date:"[EDIT] Date", link:"#"},
+    {type:"Article", title:"[EDIT] Article title", date:"[EDIT] Date", link:"#"},
+    {type:"Podcast", title:"[EDIT] Podcast episode", date:"[EDIT] Date", link:"#"}
+  ],
+  testimonials: [
+    {q:"[EDIT] Placeholder quote. Replace with a real testimonial.", who:"[EDIT] Name, role"},
+    {q:"[EDIT] Placeholder quote. Replace with a real testimonial.", who:"[EDIT] Name, role"}
+  ],
+  services: [
+    {name:"AI product build", items:["Scoping and architecture","Working prototype","Production launch"]},
+    {name:"AI strategy advisory", items:["Opportunity mapping","Build-or-buy review","Roadmap and team plan"]},
+    {name:"Technical due diligence", items:["Code and model review","Risk report","Investor-ready summary"]}
+  ],
+  email:"[EDIT]you@example.com", linkedin:"#", github:"#", x:"#", calendly:"#"
+};
+</script>
+
+<!-- ===== NAVIGATION ===== -->
+<header>
+  <nav class="wrap" aria-label="Main">
+    <a class="logo" href="#top">Sarah Fatima</a>
+    <div class="links" id="links">
+      <a href="#about">About</a><a href="#expertise">Expertise</a><a href="#ventures">Ventures</a><a href="#projects">Projects</a>
+      <a href="#experience">Experience</a><a href="#services">Services</a><a href="#contact">Contact</a>
+    </div>
+    <button class="icon-btn" id="theme" aria-label="Toggle light and dark mode">◐</button>
+    <a class="btn" href="#contact">Work with me</a>
+    <button class="icon-btn" id="menu" aria-label="Open menu" aria-expanded="false">☰</button>
+  </nav>
+</header>
+
+<main id="top">
+<!-- ===== HERO ===== -->
+<div class="wrap hero">
+  <div>
+    <p class="mono" style="color:var(--muted)">Multan, Pakistan</p>
+    <h1>Sarah Fatima</h1>
+    <p class="lead" style="font-size:1.35rem;color:var(--ink)">AI Engineer and Founder, building intelligent products that ship.</p>
+    <p class="lead">She builds production AI systems, then builds the company around them. Engineering and business, one practice.</p>
+    <div class="cta-row"><a class="btn" href="#contact">Work with me</a><a class="btn ghost" href="#projects">See projects</a></div>
+  </div>
+  <div class="term" role="img" aria-label="Terminal animation showing an AI system being built, shipped, and turned into a company">
+    <div class="bar"><i></i><i></i><i></i></div>
+    <pre id="typed"></pre><span class="caret"></span>
+  </div>
+</div>
+
+<!-- ===== ABOUT ===== -->
+<section id="about"><div class="wrap two reveal">
+  <div>
+    <h2>About</h2>
+    <p>I’m Sarah, an AI Engineer and AI Entrepreneur based in Multan, Pakistan. I build LLM applications, agents and data pipelines that run in production, and I turn the ones that matter into products and companies.</p>
+    <p>[EDIT] Add two sentences about your story and what you care about.</p>
+    <div class="facts" style="margin-top:var(--s3)">
+      <div class="fact"><b>[EDIT]</b>years of experience</div>
+      <div class="fact"><b>[EDIT]</b>products shipped</div>
+      <div class="fact"><b>[EDIT]</b>companies founded</div>
+      <div class="fact"><b>Multan</b>Pakistan</div>
+    </div>
+  </div>
+  <div class="photo" role="img" aria-label="Photo placeholder for Sarah Fatima">[EDIT] Add your photo</div>
+</div></section>
+
+<!-- ===== EXPERTISE ===== -->
+<section id="expertise"><div class="wrap reveal">
+  <h2>Expertise</h2>
+  <div class="tabs" role="tablist" aria-label="Expertise areas">
+    <button role="tab" aria-selected="true" data-tab="eng">AI engineering</button>
+    <button role="tab" aria-selected="false" data-tab="biz">Entrepreneurship</button>
+  </div>
+  <div id="tab-eng" class="grid"></div>
+  <div id="tab-biz" class="grid" hidden></div>
+</div></section>
+
+<!-- ===== VENTURES ===== -->
+<section id="ventures"><div class="wrap reveal">
+  <h2>Ventures</h2>
+  <div class="grid" id="ventureGrid"></div>
+</div></section>
+
+<!-- ===== PROJECTS ===== -->
+<section id="projects"><div class="wrap reveal">
+  <h2>Featured projects</h2>
+  <div class="tabs" id="filters" aria-label="Filter projects"></div>
+  <div class="grid" id="projectGrid"></div>
+</div></section>
+
+<!-- ===== TECH STACK ===== -->
+<section id="stack"><div class="wrap reveal">
+  <h2>Tech stack</h2>
+  <div class="grid" id="stackGrid"></div>
+</div></section>
+
+<!-- ===== EXPERIENCE ===== -->
+<section id="experience"><div class="wrap reveal">
+  <h2>Experience</h2>
+  <div class="timeline" id="timeline"></div>
+</div></section>
+
+<!-- ===== SPEAKING AND WRITING ===== -->
+<section id="writing"><div class="wrap reveal">
+  <h2>Speaking and writing</h2>
+  <ul class="plain" id="writingList"></ul>
+</div></section>
+
+<!-- ===== TESTIMONIALS ===== -->
+<section id="testimonials"><div class="wrap reveal">
+  <h2>Testimonials</h2>
+  <div class="grid" id="quotes"></div>
+</div></section>
+
+<!-- ===== SERVICES ===== -->
+<section id="services"><div class="wrap reveal">
+  <h2>Work with me</h2>
+  <div class="grid" id="serviceGrid"></div>
+</div></section>
+
+<!-- ===== CONTACT ===== -->
+<section id="contact"><div class="wrap two reveal">
+  <div>
+    <h2>Contact</h2>
+    <p class="lead">Tell me what you’re building. I reply within a few days.</p>
+    <ul class="plain" id="contactLinks"></ul>
+  </div>
+  <form id="form" novalidate>
+    <label>Name<input id="f-name" autocomplete="name" required><span class="err" id="e-name"></span></label>
+    <label>Email<input id="f-email" type="email" autocomplete="email" required><span class="err" id="e-email"></span></label>
+    <label>Organisation<input id="f-org" autocomplete="organization"></label>
+    <label>Inquiry type<select id="f-type"><option>AI product build</option><option>AI strategy advisory</option><option>Technical due diligence</option><option>Collaboration</option><option>Other</option></select></label>
+    <label>Message<textarea id="f-msg" rows="5" required></textarea><span class="err" id="e-msg"></span></label>
+    <button class="btn" type="submit">Send message</button>
+    <p class="mono" id="status" role="status" style="color:var(--muted)"></p>
+  </form>
+</div></section>
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer><div class="wrap">
+  <span>© <span id="yr"></span> Sarah Fatima</span>
+  <span id="social"></span>
+  <a href="#top">Back to top</a>
+</div></footer>
+
+<script>
+const $=s=>document.querySelector(s), esc=t=>String(t).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const chips=a=>a.map(x=>`<span class="chip">${esc(x)}</span>`).join("");
+
+/* Theme */
+const root=document.documentElement;
+try{const t=localStorage.getItem("theme");if(t)root.dataset.theme=t}catch(e){}
+$("#theme").onclick=()=>{
+  const dark=root.dataset.theme?root.dataset.theme==="dark":matchMedia("(prefers-color-scheme:dark)").matches;
+  root.dataset.theme=dark?"light":"dark";
+  try{localStorage.setItem("theme",root.dataset.theme)}catch(e){}
+};
+/* Mobile menu */
+$("#menu").onclick=e=>{const o=$("#links").classList.toggle("open");e.currentTarget.setAttribute("aria-expanded",o)};
+$("#links").onclick=e=>{if(e.target.tagName==="A"){$("#links").classList.remove("open");$("#menu").setAttribute("aria-expanded","false")}};
+
+/* Hero terminal typing */
+const lines=["$ build --system agents+rag+pipelines","✓ evaluated, monitored, in production","$ ship --to real-users","✓ product live","$ found --company","✓ the business is built around it"];
+const typed=$("#typed");
+if(matchMedia("(prefers-reduced-motion:reduce)").matches){typed.textContent=lines.join("\n")}
+else{let l=0,c=0;(function tick(){
+  if(l>=lines.length)return;
+  typed.textContent=lines.slice(0,l).join("\n")+(l?"\n":"")+lines[l].slice(0,++c);
+  if(c>=lines[l].length){l++;c=0;setTimeout(tick,650)}else setTimeout(tick,32);
+})()}
+
+/* Expertise */
+const eng=["LLM applications","Agentic systems","RAG","Fine-tuning","MLOps","Data pipelines","Evaluation"];
+const biz=["Product strategy","Go-to-market","Fundraising","Team building","AI transformation consulting"];
+const tile=a=>a.map(x=>`<div class="card"><h3>${x}</h3></div>`).join("");
+$("#tab-eng").innerHTML=tile(eng);$("#tab-biz").innerHTML=tile(biz);
+document.querySelectorAll("[data-tab]").forEach(b=>b.onclick=()=>{
+  document.querySelectorAll("[data-tab]").forEach(x=>x.setAttribute("aria-selected",x===b));
+  $("#tab-eng").hidden=b.dataset.tab!=="eng";$("#tab-biz").hidden=b.dataset.tab!=="biz";
+});
+
+/* Ventures */
+$("#ventureGrid").innerHTML=DATA.ventures.map(v=>`<article class="card"><span class="chip status">${esc(v.status)}</span><h3>${esc(v.name)}</h3><p>${esc(v.desc)}</p><p class="mono">${esc(v.role)} · ${esc(v.metric)}</p><a href="${esc(v.link)}">Visit</a></article>`).join("");
+
+/* Projects with filter */
+const cats=["All",...new Set(DATA.projects.map(p=>p.cat))];
+function drawProjects(f){
+  $("#filters").innerHTML=cats.map(c=>`<button aria-pressed="${c===f}" data-c="${c}">${c}</button>`).join("");
+  $("#projectGrid").innerHTML=DATA.projects.filter(p=>f==="All"||p.cat===f).map(p=>`<article class="card"><span class="chip">${esc(p.cat)}</span><h3>${esc(p.title)}</h3><p><b>Problem.</b> ${esc(p.problem)}</p><p><b>Approach.</b> ${esc(p.approach)}</p><div>${chips(p.stack)}</div><p class="mono">${esc(p.outcome)}</p><a href="${esc(p.gh)}">GitHub</a> · <a href="${esc(p.demo)}">Demo</a> · <a href="${esc(p.study)}">Case study</a></article>`).join("");
+  document.querySelectorAll("#filters button").forEach(b=>b.onclick=()=>drawProjects(b.dataset.c));
+}
+drawProjects("All");
+
+/* Stack, timeline, writing, quotes, services, contact */
+$("#stackGrid").innerHTML=Object.entries(DATA.stack).map(([k,v])=>`<div class="card"><h3>${k}</h3>${chips(v)}</div>`).join("");
+$("#timeline").innerHTML=DATA.timeline.map(t=>`<article><p class="mono" style="margin:0">${esc(t.when)}</p><h3>${esc(t.role)}</h3><p>${esc(t.note)}</p></article>`).join("");
+$("#writingList").innerHTML=DATA.writing.map(w=>`<li><span class="chip">${esc(w.type)}</span><a href="${esc(w.link)}">${esc(w.title)}</a> <span class="mono" style="color:var(--muted)">${esc(w.date)}</span></li>`).join("");
+$("#quotes").innerHTML=DATA.testimonials.map(t=>`<blockquote class="card"><p>“${esc(t.q)}”</p><p class="mono">${esc(t.who)}</p></blockquote>`).join("");
+$("#serviceGrid").innerHTML=DATA.services.map(s=>`<article class="card"><h3>${s.name}</h3><ul class="plain">${s.items.map(i=>`<li>${i}</li>`).join("")}</ul><p style="margin-top:var(--s2)"><a class="btn" href="#contact">Ask about this</a></p></article>`).join("");
+$("#contactLinks").innerHTML=`<li>Email: <a href="mailto:${esc(DATA.email)}">${esc(DATA.email)}</a></li><li><a href="${esc(DATA.calendly)}">Book a call</a></li><li><a href="${esc(DATA.linkedin)}">LinkedIn</a></li><li><a href="${esc(DATA.github)}">GitHub</a></li><li><a href="${esc(DATA.x)}">X</a></li>`;
+$("#social").innerHTML=`<a href="${esc(DATA.linkedin)}" aria-label="LinkedIn">LinkedIn</a> · <a href="${esc(DATA.github)}" aria-label="GitHub">GitHub</a> · <a href="${esc(DATA.x)}" aria-label="X">X</a>`;
+$("#yr").textContent=new Date().getFullYear();
+
+/* Contact form: validation + mailto fallback */
+$("#form").onsubmit=e=>{
+  e.preventDefault();
+  const n=$("#f-name").value.trim(),m=$("#f-email").value.trim(),g=$("#f-msg").value.trim();
+  $("#e-name").textContent=n?"":"Enter your name.";
+  $("#e-email").textContent=/^\S+@\S+\.\S+$/.test(m)?"":"Enter a valid email address.";
+  $("#e-msg").textContent=g?"":"Write a short message.";
+  if(!n||!/^\S+@\S+\.\S+$/.test(m)||!g)return;
+  const body=`Name: ${n}\nEmail: ${m}\nOrganisation: ${$("#f-org").value}\nType: ${$("#f-type").value}\n\n${g}`;
+  location.href=`mailto:${DATA.email}?subject=${encodeURIComponent("Website inquiry: "+$("#f-type").value)}&body=${encodeURIComponent(body)}`;
+  $("#status").textContent="Opening your email app to send this message.";
+};
+
+/* Scroll reveal */
+const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add("in");io.unobserve(x.target)}}),{threshold:.1});
+document.querySelectorAll(".reveal").forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
